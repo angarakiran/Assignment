@@ -1,4 +1,5 @@
-#Project Title : Assignment
+## Project Title : Assignment
+
 Instructions:
 1. Navigate to "www.amazon.com"
 2. Go into "Best sellers in Digital Cameras"
@@ -7,69 +8,44 @@ Instructions:
 5. Check that correct product was added
 6. Check that subtotal price sum is correct
 
-###Getting Started
+## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+1. Copy the project related files and create a new project in any of the IDE
+2. Check if there are any errors and resolve them accordingly i.e., Add the Libraries properly into the project and make sure that all the classes are imported with the required API's 
 
-###Prerequisites
+## Prerequisites
 
-1. Install Selenium standalone server, Properties jars, 
+1. Install Selenium standalone server 
+2. Set the system property by downloading the gecko. This project is targetted for Firefox browser
+3. Properties jars (If login functionality is required then fetching the attribute values from the properties file)
 
-Give examples
 
-Installing
+## Deployment and Execution:
 
-A step by step series of examples that tell you how to get a development env running
+1. This project has mainly 4 packages:
+    a. com.amazon.AddToCart: Have a class and respective methods which fetches the list of Best Sellers in digital cameras and selects the 5th product specifically and adds 8 pieces of that product to the cart.
+    b. com.amazon.FunctionalLibraries: Have general functions deals with login, reading property files, and Logout functionalities.
+    c. com.amazon.login: Have initialization of the driver, object creation and execution of the methods in an order.
+    d. com.amazon.ObjectRepository: This contains an interface which has details about the static and dynamic locators
+    e. com.amazon.Payment: Not implemented yet as it is not there in the requirement.
+    f. com.amazon.resources: contains files like excel or property files
+2. testng.xml is from where we run the project as TestNG suite
+3. test-output contains the results of the project
 
-Say what the step will be
+## Results:
 
-Give the example
+When we run the TestNG suite from the project it will execute the all the required steps which are suggested in "Instructions" and will fetch the sum of the products quantity which has been added to the cart.
 
-And repeat
+* [Hybrid Framework] - The Hybrid framework used
+* [TestNG] - Run as a testNG suite
 
-until finished
+## To Be Done:
 
-End with an example of getting some data out of the system or using it for a little demo
-Running the tests
+1. Need to execute the same with respect to BDD framework
+2. Define the functions and calling the test cases in a proper way
+3. Output of the project is proper but while closing the session getting errors
+4. Integrate Maven for dependency management
+## License & Copyright
+Kiran Avs
 
-Explain how to run the automated tests for this system
-Break down into end to end tests
 
-Explain what these tests test and why
-
-Give an example
-
-And coding style tests
-
-Explain what these tests test and why
-
-Give an example
-
-Deployment
-
-Add additional notes about how to deploy this on a live system
-Built With
-
-    Dropwizard - The web framework used
-    Maven - Dependency Management
-    ROME - Used to generate RSS Feeds
-
-Contributing
-
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
-Versioning
-
-We use SemVer for versioning. For the versions available, see the tags on this repository.
-Authors
-
-    Billie Thompson - Initial work - PurpleBooth
-
-See also the list of contributors who participated in this project.
-License
-
-This project is licensed under the MIT License - see the LICENSE.md file for details
-Acknowledgments
-
-    Hat tip to anyone whose code was used
-    Inspiration
-    etc
